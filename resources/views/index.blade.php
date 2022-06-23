@@ -23,6 +23,13 @@
                       
                      <button class="btn btn-danger" type="submit">Edit</button>  
                    </form>  </td>
+                   <td >  
+<form action="{{ route('product.destroy', $product->id)}}" method="post">  
+                  @csrf  
+                  @method('DELETE')  
+                  <button class="btn btn-danger" type="submit">Delete</button>  
+                </form>  
+</td>  
                 
              </tr>
 </td>    
