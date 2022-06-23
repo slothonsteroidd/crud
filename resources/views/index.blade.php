@@ -18,8 +18,14 @@
                 <td>{{$product->id}}</td>  
                 <td>{{$product->name}}</td>  
                 <td>{{$product->description}}</td>   
-      
-             </tr>  
+                <td><form action="{{ route('product.edit', $product->id)}}" method="GET">  
+                     @csrf  
+                      
+                     <button class="btn btn-danger" type="submit">Edit</button>  
+                   </form>  </td>
+                
+             </tr>
+</td>    
     @endforeach  
     </tbody>  
     </table>  
