@@ -16,6 +16,7 @@ Route::resource('product', ProductController::class);
 Route::get('/product/create',function(){
     return view("create");
 });
+Route::get('/product/read','ProductController@index');
 Route::get('/', function () {
     return view('welcome');
 });
